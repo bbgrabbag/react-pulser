@@ -17,6 +17,7 @@ class Bar extends Component {
                 interval: setInterval(() => adjustHeight(i), changeRate)
             });
     }
+
     componentWillReceiveProps(nextProps) {
         let { animate, i, changeRate, adjustHeight } = this.props;
         let newAnimate = nextProps.animate;
@@ -29,6 +30,7 @@ class Bar extends Component {
             });
         }
     }
+
     render() {
         let { styles, width, height } = this.props;
         return (

@@ -753,9 +753,9 @@ var Pulser = function (_Component) {
         var options = props.options;
 
         var defaults = {
-            changeRate: options.changeRate > 15 ? options.changeRate : 20,
+            changeRate: options.changeRate < 10 ? options.changeRate : 15,
             maxHeight: 75,
-            minHeight: options.minHeight < 31 ? options.minHeight : 30,
+            minHeight: options.minHeight < 31 || options.minHeight > -1 ? options.minHeight : 30,
             barQuant: options.barQuant < 12 ? options.barQuant : 5
         };
         var initialValues = (0, _utils.setInitialValues)(defaults);

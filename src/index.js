@@ -11,9 +11,9 @@ export default class Pulser extends Component {
         super(props);
         let { options } = props;
         let defaults = {
-            changeRate: options.changeRate > 15 ? options.changeRate : 20,
+            changeRate: options.changeRate < 10 ? options.changeRate : 15,
             maxHeight: 75,
-            minHeight: options.minHeight < 31 ? options.minHeight : 30,
+            minHeight: options.minHeight < 31 || options.minHeight > -1 ? options.minHeight : 30,
             barQuant: options.barQuant < 12 ? options.barQuant : 5
         }
         let initialValues = setInitialValues(defaults);
@@ -23,8 +23,6 @@ export default class Pulser extends Component {
         }
         this.adjustHeight = this.adjustHeight.bind(this);
     }
-
-    
 
     adjustHeight(i) {
         this.setState(prevState => {
@@ -56,7 +54,7 @@ export default class Pulser extends Component {
     render() {
         let { barStyles, pulserStyles, animate } = this.props;
         let { initialValues, defaults } = this.state;
-        const bars = initialValues.map((bar, i) => <Bar key={i} styles={barStyles}{...bar} animate={animate}adjustHeight={this.adjustHeight}changeRate={defaults.changeRate}></Bar>)
+        const bars = initialValues.map((bar, i) => <Bar key={i} styles={barStyles}{...bar} animate={animate} adjustHeight={this.adjustHeight} changeRate={defaults.changeRate}></Bar>)
         return (
             <div className="pulser-wrapper" style={pulserStyles}>
                 {bars}
