@@ -1,0 +1,9 @@
+.pulser-wrapper {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "react-pulser",
+  "version": "0.0.1",
+  "description": "Frequency graph emulator to display during audio playbacks",
+  "main": "build/index.js",
+  "repository": "https://github.com/bbgrabbag/react-pulser.git",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Ben Turner",
+    "email": "bbgrabbag@gmail.com"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "css-loader": "^0.28.9",
+    "style-loader": "^0.20.1"
+  }
+}
