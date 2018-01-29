@@ -47,7 +47,7 @@ export default class App extends Component {
 `animate` | `boolean` | `false` | Animates bar graph.
 `barQuant` | `number` | `5` | Specifies number of bars to display.
 `minHeight` | `number` | `30` | Specifies the minimum initial height of each bar in terms of the percentage of its parent container. Must be between 0 and 30.
-`changeRate` | `number` | `15` | Specifies the number in millisecons for how fast to animate.
+`changeRate` | `number` | `15` | Specifies the number in milliseconds for how fast to animate.
 `pulserStyles` | `object` | `{}` | Style object for the outer container. Use this if you want to override the default CSS styling. 
 `barStyles` | `object` | `{}` | Style object for individual bars. Use this if you want to override the default CSS styling. 
 
