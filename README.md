@@ -19,7 +19,6 @@ export default class App extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(e) {
-        let { name } = e.target;
         this.setState(prevState => {
             return {
                 playing: !prevState.playing
