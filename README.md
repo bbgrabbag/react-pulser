@@ -36,6 +36,9 @@ export default class App extends Component {
     }
 }
 ```
+
+![react-pulser demo](demo.png "demo screenshot of react-pulser")
+
 - NOTE: The `<Pulser>` component fills its parent container by default. Make sure it has a specified height and has position set to `relative` or it may not display. See the *Props* section below for more information on how to use custom styling.
 ---
 #### Props:
