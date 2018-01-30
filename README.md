@@ -14,7 +14,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            playing: true
+            playing: false
         }
         this.handleClick = this.handleClick.bind(this);
     }
@@ -22,7 +22,7 @@ export default class App extends Component {
         let { name } = e.target;
         this.setState(prevState => {
             return {
-                playing: name === "play" ? true : false
+                playing: !prevState.playing
             }
         })
     }
@@ -30,15 +30,14 @@ export default class App extends Component {
         let { playing } = this.state
         return (
             <div className="app-wrapper">
-                <button onClick={this.handleClick} name="play">Play</button>
-                <button onClick={this.handleClick} name="pause">Pause</button>
+                <button onClick={this.handleClick} >Play/Pause</button>
                 <Pulser animate={playing} ></Pulser>
             </div>
         )
     }
 }
 ```
-- NOTE: The `<Pulser>` component fills its parent container by default. Make sure it has a specified height or it may not display. See the *Props* section below for more information on how to use custom styling.
+- NOTE: The `<Pulser>` component fills its parent container by default. Make sure it has a specified height and has position set to `relative` or it may not display. See the *Props* section below for more information on how to use custom styling.
 ---
 #### Props:
 

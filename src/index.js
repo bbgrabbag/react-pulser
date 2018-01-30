@@ -10,11 +10,12 @@ export default class Pulser extends Component {
     constructor(props) {
         super(props);
         let { options } = props;
+        options = options || {}
         let defaults = {
-            changeRate: options.changeRate < 10 ? options.changeRate : 15,
+            changeRate: options.hasOwnProperty("changeRate") ? options.changeRate < 10 ? options.changeRate : 15 : 15,
             maxHeight: 75,
-            minHeight: options.minHeight < 31 || options.minHeight > -1 ? options.minHeight : 30,
-            barQuant: options.barQuant < 12 ? options.barQuant : 5
+            minHeight: options.hasOwnProperty("minHeight") ? options.minHeight < 31 || options.minHeight > -1 ? options.minHeight : 30 : 30,
+            barQuant: options.hasOwnProperty("barQuant") in options ? options.barQuant < 12 ? options.barQuant : 5 : 5
         }
         let initialValues = setInitialValues(defaults);
         this.state = {
