@@ -12,7 +12,7 @@ export default class Pulser extends Component {
         let { options } = props;
         options = options || {}
         let defaults = {
-            changeRate: options.changeRate < 10 ? options.changeRate : 15,
+            changeRate: options.changeRate || 15,
             maxHeight: 75,
             minHeight: options.minHeight < 31 || options.minHeight > -1 ? options.minHeight : 30,
             barQuant: options.barQuant < 12 ? options.barQuant : 5
