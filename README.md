@@ -46,7 +46,7 @@ export default class App extends Component {
 `animate` | `boolean` | `false` | Toggles bar graph animation.
 `pulserStyles` | `object` | `{}` | Style object for the outer container. Use this if you want to override the default CSS styling. You can also refer to the selector `.pulser-wrapper` in CSS.
 `barStyles` | `object` | `{}` | Style object for individual bars. Use this if you want to override the default CSS styling. You can also refer to the selector `.bar` in CSS.
-`options` | `object` | {} | The `options` prop is an object which contains several extra configuration settings. See below.
+`options` | `object` | `{}` | The `options` prop is an object which contains several extra configuration settings. See below.
 
 ##### `Options` prop
 ```javascript
