@@ -1,6 +1,6 @@
 {
   "name": "react-pulser",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Frequency graph emulator to display during audio playbacks",
   "main": "build/index.js",
   "repository": "https://github.com/bbgrabbag/react-pulser.git",
